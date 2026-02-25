@@ -3,6 +3,8 @@ name: Mythx
 on:
   workflow_dispatch:
 
+permissions: write-all
+
 jobs:
   mythx:
     name: Submit to Mythx
