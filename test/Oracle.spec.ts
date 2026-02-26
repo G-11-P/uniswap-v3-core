@@ -602,8 +602,10 @@ describe('Oracle', () => {
             0,
           ])
           expect({
-            tickCumulatives: tickCumulatives.map((tc) => tc.toNumber()),
-            secondsPerLiquidityCumulativeX128s: secondsPerLiquidityCumulativeX128s.map((lc) => lc.toString()),
+            tickCumulatives: tickCumulatives.map((tc: BigNumber) => tc.toNumber()),
+            secondsPerLiquidityCumulativeX128s: secondsPerLiquidityCumulativeX128s.map((lc: BigNumber) =>
+              lc.toString()
+            ),
           }).to.matchSnapshot()
         })
 
